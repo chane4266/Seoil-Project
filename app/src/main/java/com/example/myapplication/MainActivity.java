@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         MypageBtn = (Button) findViewById(R.id.MyBtn);
         MypageBtn.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View view){
                 if(view.getId()==R.id.MyBtn){
