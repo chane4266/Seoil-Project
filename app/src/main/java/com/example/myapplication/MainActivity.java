@@ -7,7 +7,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import android.Manifest;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.LocationTrackingMode;
@@ -28,7 +31,10 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.ACCESS_COARSE_LOCATION
     };
+
     List<LatLng> lstLatLng = new ArrayList<>();
+    Button MypageBtn;
+
 
 
     @Override
@@ -36,13 +42,25 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        MypageBtn = (Button) findViewById(R.id.MyBtn);
+        MypageBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if(view.getId()==R.id.MyBtn){
+                    Intent intent01 = new Intent(MainActivity.this,LoginActivity.class);
+                    startActivity(intent01);
+                }
+            }
+        });
+
         FragmentManager fm = getSupportFragmentManager();
         MapFragment mapFragment = (MapFragment) fm.findFragmentById(R.id.map);
-        if(mapFragment == null){
-            fm.beginTransaction().add(R.id.map,mapFragment).commit();
+        if (mapFragment == null) {
+            fm.beginTransaction().add(R.id.map, mapFragment).commit();
         }
         mapFragment.getMapAsync(this);
         locationSource = new FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE);
+
     }
 
     @Override
@@ -55,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
@@ -66,6 +85,16 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 naverMap.setLocationTrackingMode(LocationTrackingMode.Follow);
             }
         }
-        super.onRequestPermissionsResult(requestCode,permissions,grantResults);
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
+
+
+
+
 }
+
+
+
+
+
+    /*온클릭리스너*/
