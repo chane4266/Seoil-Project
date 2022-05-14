@@ -42,6 +42,18 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        MypageBtn = (Button) findViewById(R.id.MyBtn);
+        MypageBtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                if(view.getId()==R.id.MyBtn){
+                    Intent intent02 = new Intent(MainActivity.this,LoginActivity.class);
+                    startActivity(intent02);
+                }
+            }
+        });
+
 
         MypageBtn2 = (Button) findViewById(R.id.MyBtn2);
         MypageBtn2.setOnClickListener(new View.OnClickListener(){

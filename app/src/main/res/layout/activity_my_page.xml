@@ -122,14 +122,14 @@
         app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="0dp">
 
-        <View
+        <ScrollView
             android:id="@+id/sView"
             android:layout_width="wrap_content"
             android:layout_height="39dp"
             android:background="#0000ff"
             android:visibility="invisible" />
 
-        <View
+        <ScrollView
             android:id="@+id/jView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -137,13 +137,13 @@
             android:visibility="invisible"/>
 
 
-        <View
+        <ScrollView
             android:id="@+id/rView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00ff00"
             android:visibility="invisible">
-        </View>
+        </ScrollView>
 
     </FrameLayout>
 
