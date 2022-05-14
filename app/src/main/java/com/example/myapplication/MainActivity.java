@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     List<LatLng> lstLatLng = new ArrayList<>();
     Button MypageBtn;
-
+    Button MypageBtn2;
 
 
     @Override
@@ -42,15 +42,18 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MypageBtn = (Button) findViewById(R.id.MyBtn);
-        MypageBtn.setOnClickListener(new View.OnClickListener(){
+
+        MypageBtn2 = (Button) findViewById(R.id.MyBtn2);
+        MypageBtn2.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view){
-                if(view.getId()==R.id.MyBtn){
-                    Intent intent01 = new Intent(MainActivity.this,LoginActivity.class);
+                if(view.getId()==R.id.MyBtn2){
+                    Intent intent01 = new Intent(MainActivity.this,MyPageActivity.class);
                     startActivity(intent01);
                 }
+
+
             }
         });
 
