@@ -22,17 +22,17 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/kakaotalk_photo_2022_05_03_11_11_05" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
@@ -124,26 +124,25 @@
 
         <ScrollView
             android:id="@+id/sView"
-            android:layout_width="wrap_content"
-            android:layout_height="39dp"
-            android:background="#0000ff"
-            android:visibility="invisible" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DDD5BA"
+            android:visibility="invisible"/>
 
         <ScrollView
             android:id="@+id/jView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="#990000"
-            android:visibility="invisible"/>
+            android:visibility="invisible" />
 
 
         <ScrollView
             android:id="@+id/rView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="#00ff00"
-            android:visibility="invisible">
-        </ScrollView>
+            android:visibility="invisible" />
 
     </FrameLayout>
 
