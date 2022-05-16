@@ -126,24 +126,39 @@
             android:id="@+id/sView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#DDD5BA"
-            android:visibility="invisible"/>
-
+            android:visibility="invisible">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스탬프"
+                android:textSize="30sp"
+                android:textAlignment="center"/>
+        </ScrollView>
         <ScrollView
             android:id="@+id/jView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#990000"
-            android:visibility="invisible" />
-
+            android:visibility="invisible">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="즐겨찾기"
+                android:textSize="30sp"
+                android:textAlignment="center"/>
+        </ScrollView>
 
         <ScrollView
             android:id="@+id/rView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#00ff00"
-            android:visibility="invisible" />
-
+            android:visibility="invisible">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 리뷰"
+                android:textSize="30sp"
+                android:textAlignment="center"/>
+        </ScrollView>
     </FrameLayout>
 
 
