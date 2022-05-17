@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
@@ -35,12 +36,28 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     List<LatLng> lstLatLng = new ArrayList<>();
     Button MypageBtn;
     Button MypageBtn2;
+    Button Listbtn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
+        Listbtn = (Button) findViewById(R.id.liBtn);
+        Listbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(view.getId() == R.id.liBtn){
+                    Intent intentl = new Intent(MainActivity.this,ListActivity.class);
+                    startActivity(intentl);
+                }
+            }
+        });
+
 
         MypageBtn = (Button) findViewById(R.id.MyBtn);
         MypageBtn.setOnClickListener(new View.OnClickListener(){
