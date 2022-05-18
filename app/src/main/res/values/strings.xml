@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">RecyclerView</string>
+
+    <string-array name="store_name">
+
+    </string-array>
+
+    <string-array name="description">
+
+    </string-array>
 </resources>
