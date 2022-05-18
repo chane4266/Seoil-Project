@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".idSearch"
+            android:name=".FindPWActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FindIdActivuty"
             android:exported="false" />
         <activity
             android:name=".ListActivity"
