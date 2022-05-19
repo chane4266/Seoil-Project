@@ -36,6 +36,14 @@ public class ListActivity extends AppCompatActivity {
         adapter.addItem(new StoreListitem(R.drawable.ddug,"서일분식","서일대점"));
         adapter.addItem(new StoreListitem(R.drawable.moms,"맘스터치","서일대점"));
         adapter.addItem(new StoreListitem(R.drawable.gomtang,"닭곰탕","서일대점"));
+        adapter.addItem(new StoreListitem(R.drawable.ddug,"육해공","02-777-7777"));
+        adapter.addItem(new StoreListitem(R.drawable.moms,"모두랑","서일대점"));
+        adapter.addItem(new StoreListitem(R.drawable.gomtang,"닭곰탕","서일대점"));
+        adapter.addItem(new StoreListitem(R.drawable.ddug,"로제떡볶이","서일대점"));
+        adapter.addItem(new StoreListitem(R.drawable.moms,"동대문엽기","서일대점"));
+        adapter.addItem(new StoreListitem(R.drawable.gomtang,"치즈밥","서일대점"));
+        adapter.addItem(new StoreListitem(R.drawable.ddug,"지지고","서일대점"));
+
     }
 
 
