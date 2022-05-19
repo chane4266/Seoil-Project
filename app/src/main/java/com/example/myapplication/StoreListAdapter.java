@@ -47,17 +47,20 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
         ImageView store_img;
         TextView store_title;
         TextView store_de;
+        TextView store_score;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             store_img = itemView.findViewById(R.id.storeimage);
             store_title = itemView.findViewById(R.id.titletxt);
             store_de = itemView.findViewById(R.id.detxt);
+            store_score = itemView.findViewById(R.id.scoretxt);
         }
         public void setItem(StoreListitem item){
             store_img.setImageResource(item.resId);
             store_title.setText(item.title);
             store_de.setText(item.content);
+            store_score.setText(item.score);
         }
     }
 }
