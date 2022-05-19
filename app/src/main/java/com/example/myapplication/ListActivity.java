@@ -7,11 +7,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+
+import java.util.ArrayList;
 
 import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
 
+    RecyclerView StoreList_list;
+    StoreListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,20 +25,18 @@ public class ListActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        
-        /*테스트를 위한 더미데이터*/
-        ArrayList<String> testDataSet = new ArrayList<>();
-        for(int i = 0; i<20; i++){
-            testDataSet.add("Test Data" + i );
-        }
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager((Context) this);
-        recyclerView.setLayoutManager(linearLayoutManager); //layout매니저 설정
 
-        CustomAdapter customAdapter = new CustomAdapter(testDataSet);
-        recyclerView.setAdapter(customAdapter);
+        StoreList_list = findViewById(R.id.recyclerView);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL, false);
+        StoreList_list.setLayoutManager(layoutManager);
 
+        adapter = new StoreListAdapter(getApplicationContext());
+        StoreList_list.setAdapter(adapter);
 
+        adapter.addItem(new StoreListitem(R.drawable.ddug,"서일분식","서일대점"));
+        adapter.addItem(new StoreListitem(R.drawable.moms,"맘스터치","서일대점"));
+        adapter.addItem(new StoreListitem(R.drawable.gomtang,"닭곰탕","서일대점"));
     }
+
+
 }
