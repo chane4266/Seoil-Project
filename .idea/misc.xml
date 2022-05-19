@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dlrjs/AndroidStudioProjects/zoo/app/src/main/res/drawable/list.xml" value="0.2985" />
+        <entry key="..\:/Users/dlrjs/AndroidStudioProjects/zoo/app/src/main/res/layout/activity_list.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/dlrjs/AndroidStudioProjects/zoo/app/src/main/res/layout/item_list.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/dlrjs/AndroidStudioProjects/zoo/app/src/main/res/layout/recycler_item.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/dlrjs/AndroidStudioProjects/zoo/app/src/main/res/layout/recyclerview_item.xml" value="0.358695652173913" />
         <entry key="..\:/Users/seoil/AndroidStudioProjects/umin/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/seoil/AndroidStudioProjects/umin/app/src/main/res/layout/activity_main.xml" value="0.29257246376811596" />
         <entry key="..\:/Users/seoil/AndroidStudioProjects/umin/app/src/main/res/layout/activity_sign.xml" value="0.5" />
