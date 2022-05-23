@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 
 public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.ViewHolder>{
     Context mContext;
-    ArrayList<StoreListitem> items = new ArrayList<>();
+    private ArrayList<StoreListitem> items = new ArrayList<>();
 
     public StoreListAdapter(Context mContext){
         this.mContext = mContext;
@@ -23,6 +24,9 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        mContext = parent.getContext();
+
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.recyclerview_l, parent,false);
         return new ViewHolder(itemView);
@@ -43,7 +47,7 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
         items.add(item);
    }
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    class ViewHolder extends RecyclerView.ViewHolder{
         ImageView store_img;
         TextView store_title;
         TextView store_de;
@@ -55,7 +59,23 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
             store_title = itemView.findViewById(R.id.titletxt);
             store_de = itemView.findViewById(R.id.detxt);
             store_score = itemView.findViewById(R.id.scoretxt);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) { //아이템뷰 -> 아이템뷰가 가리키는 영역만큼 클릭이벤트 생성
+                    int currentp = getAdapterPosition();
+                    StoreListitem storeListitem = items.get(currentp); //각 카드뷰마다 저장된 정보
+
+                    Toast.makeText(mContext,storeListitem.title + "\n"
+                            + storeListitem.score + "\n"
+                            + storeListitem.content
+                            ,Toast.LENGTH_SHORT).show();  //각 카드뷰마다 저장된 정보를 토스트로 보여줌
+                                                          //-----식당정보페이지완성되면 그기능으로 바꾸기-----
+                }
+            });
         }
+
+
         public void setItem(StoreListitem item){
             store_img.setImageResource(item.resId);
             store_title.setText(item.title);
