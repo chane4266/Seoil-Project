@@ -23,6 +23,9 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/list.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/person.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/setting.xml" value="0.2085" />
+        <entry key="app/src/main/res/layout/activity_find_id_activuty.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_find_pwactivity.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_id_search.xml" value="0.2780813908231431" />
         <entry key="app/src/main/res/layout/activity_list.xml" value="0.20721652265908058" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.30164642333984376" />
@@ -33,6 +36,7 @@
         <entry key="app/src/main/res/layout/activity_sign.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1417938232421875" />
         <entry key="app/src/main/res/layout/activity_store.xml" value="0.31291137695312504" />
+        <entry key="app/src/main/res/layout/activity_store_info.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/my_row.xml" value="0.25723970695461396" />
         <entry key="app/src/main/res/layout/recyclerview_item.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/recyclerview_l.xml" value="0.26161956787109386" />
