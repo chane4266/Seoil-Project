@@ -9,8 +9,8 @@ import android.widget.Button;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
-
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener
+{
     Button btn01, btn02, btn03, btn04;
 
     @Override

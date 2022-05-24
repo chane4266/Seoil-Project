@@ -1,14 +1,19 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class FindPWActivity extends AppCompatActivity {
-
+public class FindPWActivity extends AppCompatActivity
+{
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_pwactivity);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
     }
 }
