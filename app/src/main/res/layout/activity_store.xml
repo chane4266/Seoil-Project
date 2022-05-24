@@ -10,7 +10,7 @@
 
     <EditText
         android:id="@+id/editSt_Email"
-        android:layout_width="247dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:ems="10"
@@ -24,7 +24,7 @@
 
     <EditText
         android:id="@+id/editSt_Tel"
-        android:layout_width="247dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:ems="10"
@@ -38,7 +38,7 @@
 
     <EditText
         android:id="@+id/editSt_Addr"
-        android:layout_width="247dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:ems="10"
@@ -52,7 +52,7 @@
 
     <EditText
         android:id="@+id/editSt_Nick"
-        android:layout_width="247dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:ems="10"
@@ -66,21 +66,22 @@
 
     <EditText
         android:id="@+id/editSt_Name"
-        android:layout_width="247dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
         android:hint="대표자성명"
         android:inputType="textPersonName"
         android:text=""
         android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     <EditText
         android:id="@+id/editSt_Year"
-        android:layout_width="247dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:ems="10"
@@ -94,7 +95,7 @@
 
     <EditText
         android:id="@+id/editSt_Num"
-        android:layout_width="247dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:ems="10"
@@ -119,8 +120,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editSt_Email"
+        app:layout_constraintVertical_bias="0.752"
         tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -128,7 +131,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.7" />
+        app:layout_constraintGuide_percent="0.75" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier2"
@@ -156,7 +159,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".9" />
+        app:layout_constraintGuide_percent="0.95" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,27 +4,29 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.LocationTrackingMode;
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
+import com.naver.maps.map.overlay.Marker;
 import com.naver.maps.map.util.FusedLocationSource;
 
-import java.security.Permission;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
+    private double lon,lat;
     private NaverMap naverMap;
     private FusedLocationSource locationSource;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1000;
@@ -33,10 +35,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             Manifest.permission.ACCESS_COARSE_LOCATION
     };
 
+
     List<LatLng> lstLatLng = new ArrayList<>();
     Button MypageBtn;
     Button MypageBtn2;
     Button Listbtn;
+    EditText EditLocate;
 
 
     @Override
@@ -46,6 +50,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        EditLocate = (EditText)findViewById(R.id.EditLocate);
+       // EditLocate.setText();
 
         Listbtn = (Button) findViewById(R.id.liBtn);
         Listbtn.setOnClickListener(new View.OnClickListener() {
@@ -103,6 +110,19 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         naverMap.setLocationSource(locationSource); //현재위치
         ActivityCompat.requestPermissions(this, PERMISSION, LOCATION_PERMISSION_REQUEST_CODE);
         //현재위치 표시할때 권한 확인
+
+        //naverMap.addOnLocationChangeListener(new NaverMap.OnLocationChangeListener() { //위도 경도
+            //@Override
+            //public void onLocationChange(@NonNull Location location) {
+               // lat = location.getLatitude();
+               // lon = location.getLongitude();
+                //Toast.makeText(getApplicationContext(), lat + ",\n" + lon, Toast.LENGTH_SHORT).show();//위도, 경도 토스트 텍스트로 표시하는 코드 (확인용)
+            //}
+       // });
+
+        //Marker marker = new Marker(); //마커
+        //marker.setPosition(new LatLng(37.7433567,127.0942241)); //마커 표시할 위치 (위도, 경도)
+        //marker.setMap(naverMap);
 
     }
 

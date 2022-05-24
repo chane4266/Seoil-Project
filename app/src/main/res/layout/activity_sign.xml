@@ -9,6 +9,21 @@
     tools:layout_editor_absoluteY="-127dp">
 
     <EditText
+        android:id="@+id/editName"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="이름"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <EditText
         android:id="@+id/editEmail"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -19,36 +34,9 @@
         android:text=""
         android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/editTel" />
-
-    <EditText
-        android:id="@+id/editTel"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="전화번호"
-        android:inputType="number"
-        android:text=""
-        android:textSize="15sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/editYear" />
-
-    <EditText
-        android:id="@+id/editNic"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="닉네임"
-        android:inputType="textPersonName"
-        android:text=""
-        android:textSize="15sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/editPw" />
 
     <EditText
         android:id="@+id/editId"
@@ -66,32 +54,19 @@
         app:layout_constraintTop_toBottomOf="@+id/editName" />
 
     <EditText
-        android:id="@+id/editName"
+        android:id="@+id/editNic"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="이름"
+        android:hint="닉네임"
         android:inputType="textPersonName"
         android:text=""
         android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/guideline6" />
-
-    <EditText
-        android:id="@+id/editYear"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="생년월일"
-        android:inputType="datetime"
-        android:text=""
-        android:textSize="15sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/editNic" />
+        app:layout_constraintTop_toBottomOf="@+id/editPw" />
 
     <EditText
         android:id="@+id/editPw"
@@ -108,6 +83,47 @@
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/editId"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/buttonID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="12dp"
+        android:text="중복 확인"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editId" />
+
+    <EditText
+        android:id="@+id/editTel"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="전화번호"
+        android:inputType="number"
+        android:text=""
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/editYear" />
+
+    <EditText
+        android:id="@+id/editYear"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="생년월일"
+        android:inputType="datetime"
+        android:text=""
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/editNic" />
 
     <Button
         android:id="@+id/siBtn"
@@ -132,7 +148,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.7" />
+        app:layout_constraintGuide_percent="0.75" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier2"
@@ -159,16 +175,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".9" />
-
-    <Button
-        android:id="@+id/buttonID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="중복 확인"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editId"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintGuide_percent="0.95" />
 
     <TextView
         android:id="@+id/textView1"
