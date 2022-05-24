@@ -36,13 +36,13 @@ public class ListActivity extends AppCompatActivity {
         adapter.addItem(new StoreListitem(R.drawable.ddug,"서일분식","서일대점","4.2"));
         adapter.addItem(new StoreListitem(R.drawable.moms,"맘스터치","서일대점","4.3"));
         adapter.addItem(new StoreListitem(R.drawable.gomtang,"닭곰탕","서일대점","4.7"));
-        adapter.addItem(new StoreListitem(R.drawable.ddug,"육해공","02-777-7777","5.0"));
-        adapter.addItem(new StoreListitem(R.drawable.moms,"모두랑","서일대점","3.8"));
+        adapter.addItem(new StoreListitem(R.drawable.sundae,"육해공","02-777-7777","5.0"));
+        adapter.addItem(new StoreListitem(R.drawable.s_pork,"모두랑","서일대점","3.8"));
         adapter.addItem(new StoreListitem(R.drawable.gomtang,"닭곰탕","서일대점","4.0"));
-        adapter.addItem(new StoreListitem(R.drawable.ddug,"로제떡볶이","서일대점","2.7"));
-        adapter.addItem(new StoreListitem(R.drawable.moms,"동대문엽기","서일대점","3.2"));
-        adapter.addItem(new StoreListitem(R.drawable.gomtang,"치즈밥","서일대점","4.4"));
-        adapter.addItem(new StoreListitem(R.drawable.ddug,"지지고","서일대점","4.9"));
+        adapter.addItem(new StoreListitem(R.drawable.rose_ddug,"로제떡볶이","서일대점","2.7"));
+        adapter.addItem(new StoreListitem(R.drawable.s_ddug,"동대문엽기","서일대점","3.2"));
+        adapter.addItem(new StoreListitem(R.drawable.cheese,"치즈밥","서일대점","4.4"));
+        adapter.addItem(new StoreListitem(R.drawable.gg_go,"지지고","서일대점","4.9"));
 
     }
 

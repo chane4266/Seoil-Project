@@ -48,8 +48,9 @@ public class MyPageActivity extends AppCompatActivity implements View.OnClickLis
 
         list_adapter.addItem(new StoreListitem(R.drawable.moms,"맘스터치","서일대점","4.3"));
         list_adapter.addItem(new StoreListitem(R.drawable.gomtang,"닭곰탕","서일대점","4.7"));
-        list_adapter.addItem(new StoreListitem(R.drawable.gomtang,"치즈밥","서일대점","4.4"));
-        list_adapter.addItem(new StoreListitem(R.drawable.ddug,"지지고","서일대점","4.9"));
+        list_adapter.addItem(new StoreListitem(R.drawable.cheese,"치즈밥","서일대점","4.4"));
+        list_adapter.addItem(new StoreListitem(R.drawable.gg_go,"지지고","서일대점","4.9"));
+        list_adapter.addItem(new StoreListitem(R.drawable.s_pork,"모두랑","서일대점","3.8"));
     }
 
     public void init(){
