@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+//어댑터//
 
 public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.ViewHolder>{
     Context mContext;
@@ -39,6 +40,7 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         StoreListitem item = items.get(position);
         holder.setItem(item);
+
     }
 
     @Override
@@ -62,35 +64,22 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
             store_title = itemView.findViewById(R.id.titletxt);
             store_de = itemView.findViewById(R.id.detxt);
             store_score = itemView.findViewById(R.id.scoretxt);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) { //아이템뷰 -> 아이템뷰가 가리키는 영역만큼 클릭이벤트 생성
-                    int currentp = getAdapterPosition();
-                      StoreListitem storeListitem = items.get(currentp); //각 카드뷰마다 저장된 정보
-
-                    /*if(currentp != RecyclerView.NO_POSITION){
-                        Intent intent1 = new Intent(mContext,StoreInfoActivity.class).
-                                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        intent1.putExtra("TEXT", (Parcelable) items.get(currentp));
-                        mContext.startActivity(intent1);
-                    }*/
-
-                       Toast.makeText(mContext,storeListitem.title + "\n"
+                       /*Toast.makeText(mContext,storeListitem.title + "\n"
                             + storeListitem.score + "\n"
                             + storeListitem.content
-                            ,Toast.LENGTH_SHORT).show();  //각 카드뷰마다 저장된 정보를 토스트로 보여줌
-                                                          //-----식당정보페이지완성되면 그기능으로 바꾸기-----*/
-                }
-            });
+                            ,Toast.LENGTH_SHORT).show(); */ //각 카드뷰마다 저장된 정보를 토스트로 보여줌
+                    //-----식당정보페이지완성되면 그기능으로 바꾸기-----*/
+
+
         }
 
+                public void setItem(StoreListitem item) {
+                    store_img.setImageResource(item.resId);
+                    store_title.setText(item.title);
+                    store_de.setText(item.content);
+                    store_score.setText(item.score);
 
-        public void setItem(StoreListitem item){
-            store_img.setImageResource(item.resId);
-            store_title.setText(item.title);
-            store_de.setText(item.content);
-            store_score.setText(item.score);
+                }
         }
     }
-}
+
