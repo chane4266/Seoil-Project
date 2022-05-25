@@ -64,6 +64,7 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
             store_title = itemView.findViewById(R.id.titletxt);
             store_de = itemView.findViewById(R.id.detxt);
             store_score = itemView.findViewById(R.id.scoretxt);
+
                        /*Toast.makeText(mContext,storeListitem.title + "\n"
                             + storeListitem.score + "\n"
                             + storeListitem.content
