@@ -27,7 +27,10 @@ public class ListActivity extends AppCompatActivity {
         actionBar.hide();
 
         StoreList_list = findViewById(R.id.recyclerView);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL, false);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(),
+                                                LinearLayoutManager.VERTICAL, false);
+
         StoreList_list.setLayoutManager(layoutManager);
 
         adapter = new StoreListAdapter(getApplicationContext());
