@@ -111,18 +111,18 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         ActivityCompat.requestPermissions(this, PERMISSION, LOCATION_PERMISSION_REQUEST_CODE);
         //현재위치 표시할때 권한 확인
 
-        //naverMap.addOnLocationChangeListener(new NaverMap.OnLocationChangeListener() { //위도 경도
-            //@Override
-            //public void onLocationChange(@NonNull Location location) {
-               // lat = location.getLatitude();
-               // lon = location.getLongitude();
-                //Toast.makeText(getApplicationContext(), lat + ",\n" + lon, Toast.LENGTH_SHORT).show();//위도, 경도 토스트 텍스트로 표시하는 코드 (확인용)
-            //}
-       // });
+//        naverMap.addOnLocationChangeListener(new NaverMap.OnLocationChangeListener() { //위도 경도
+//            @Override
+//            public void onLocationChange(@NonNull Location location) {
+//                lat = location.getLatitude();
+//                lon = location.getLongitude();
+//                Toast.makeText(getApplicationContext(), lat + ",\n" + lon, Toast.LENGTH_SHORT).show();//위도, 경도 토스트 텍스트로 표시하는 코드 (확인용)
+//            }
+//        });
 
-        //Marker marker = new Marker(); //마커
-        //marker.setPosition(new LatLng(37.7433567,127.0942241)); //마커 표시할 위치 (위도, 경도)
-        //marker.setMap(naverMap);
+        Marker markertest = new Marker(); //markertest = 서일대
+        markertest.setPosition(new LatLng(37.5857059,127.0974422)); //마커 표시할 위치 (위도, 경도)
+        markertest.setMap(naverMap);
 
     }
 
