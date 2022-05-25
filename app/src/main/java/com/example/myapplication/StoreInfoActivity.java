@@ -42,6 +42,7 @@ public class StoreInfoActivity extends AppCompatActivity implements View.OnClick
             case R.id.Button_Menu:
                 menu.setVisibility(View.VISIBLE);
                 review.setVisibility(View.INVISIBLE);
+
                 break;
 
             case R.id.Button_Review:

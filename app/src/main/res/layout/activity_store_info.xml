@@ -103,7 +103,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#F5B4B4"
-        android:text="메뉴"
+        android:text="메뉴1"
         app:layout_constraintBottom_toTopOf="@+id/guideline_h_center"
         app:layout_constraintEnd_toStartOf="@+id/guideline_v_center"
         app:layout_constraintHorizontal_bias="0.417"
