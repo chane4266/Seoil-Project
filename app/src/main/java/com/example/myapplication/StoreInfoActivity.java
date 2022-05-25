@@ -1,26 +1,54 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
 
-public class StoreInfoActivity extends AppCompatActivity {
+public class StoreInfoActivity extends AppCompatActivity implements View.OnClickListener{
+    private View menu;
+    private View review;
 
-    TextView textview01;
+    Button menu_button, review_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_info);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
-        textview01 = (TextView) findViewById(R.id.textView11);
+        init();
 
-        Intent intent01 = getIntent();
+        menu_button = findViewById(R.id.Button_Menu);
+        review_button = findViewById(R.id.Button_Review);
 
-        textview01.setText(intent01.getStringExtra("TEXT"));
+        menu_button.setOnClickListener(this);
+        review_button.setOnClickListener(this);
 
-        //테스트
+    }
+    public void init(){
+
+        menu = findViewById(R.id.menu_scroll);
+        review = findViewById(R.id.review_scroll);
+
+    }
+    @Override
+    public void onClick(View view) {
+        switch(view.getId()){
+            //스탬프 뷰만보이기
+            case R.id.Button_Menu:
+                menu.setVisibility(View.VISIBLE);
+                review.setVisibility(View.INVISIBLE);
+                break;
+
+            case R.id.Button_Review:
+                menu.setVisibility(View.INVISIBLE);
+                review.setVisibility(View.VISIBLE);
+                break;
+
+        }
     }
 }

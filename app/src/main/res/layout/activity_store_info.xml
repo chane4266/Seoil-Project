@@ -6,13 +6,165 @@
     android:layout_height="match_parent"
     tools:context=".StoreInfoActivity">
 
-    <TextView
-        android:id="@+id/textView11"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h_center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h_center2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05
+" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h_top2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <TextView
+        android:id="@+id/textView_Title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoText="false"
+        android:background="#F5B4B4"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:text="식당이름"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_h_top2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_v_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h_top" />
+
+    <ImageView
+        android:id="@+id/imageView_Store"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_h_center2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_v_center"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h_top2"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView_StoreInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="식당 정보"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_h_center2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_v_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_center"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h_top2" />
+
+    <Button
+        android:id="@+id/Button_Menu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F5B4B4"
+        android:text="메뉴"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_h_center"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_v_center"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h_center2" />
+
+    <Button
+        android:id="@+id/Button_Review"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F5B4B4"
+        android:backgroundTint="#F5B4B4"
+        android:text="리뷰"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_h_center"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_v_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_center"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h_center2" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_h_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_v_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h_center">
+
+        <ScrollView
+            android:id="@+id/menu_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_h_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_v_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_v_left"
+            app:layout_constraintTop_toTopOf="@+id/guideline_h_center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메뉴"
+            android:textSize="30sp"
+            android:textAlignment="center"></TextView>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/review_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_h_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_v_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_v_left"
+            app:layout_constraintTop_toTopOf="@+id/guideline_h_center">
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="리뷰"
+            android:textSize="30sp"
+            android:textAlignment="center"/>
+        </ScrollView>
+
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
