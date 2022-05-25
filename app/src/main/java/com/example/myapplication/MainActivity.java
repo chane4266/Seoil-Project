@@ -20,13 +20,15 @@ import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.overlay.Marker;
+import com.naver.maps.map.overlay.Overlay;
+import com.naver.maps.map.overlay.OverlayImage;
 import com.naver.maps.map.util.FusedLocationSource;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
-    private double lon,lat;
+    private double lon, lat;
     private NaverMap naverMap;
     private FusedLocationSource locationSource;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1000;
@@ -48,18 +50,21 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        EditLocate = (EditText)findViewById(R.id.EditLocate);
-       // EditLocate.setText();
+        EditLocate = (EditText) findViewById(R.id.EditLocate);
+        // EditLocate.setText();
 
         Listbtn = (Button) findViewById(R.id.liBtn);
         Listbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(view.getId() == R.id.liBtn){
-                    Intent intentl = new Intent(MainActivity.this,ListActivity.class);
+                if (view.getId() == R.id.liBtn) {
+                    Intent intentl = new Intent(MainActivity.this, ListActivity.class);
                     startActivity(intentl);
                 }
             }
@@ -67,12 +72,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
         MypageBtn = (Button) findViewById(R.id.MyBtn);
-        MypageBtn.setOnClickListener(new View.OnClickListener(){
+        MypageBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                if(view.getId()==R.id.MyBtn){
-                    Intent intent02 = new Intent(MainActivity.this,LoginActivity.class);
+                if (view.getId() == R.id.MyBtn) {
+                    Intent intent02 = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(intent02);
                 }
             }
@@ -80,12 +85,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
         MypageBtn2 = (Button) findViewById(R.id.MyBtn2);
-        MypageBtn2.setOnClickListener(new View.OnClickListener(){
+        MypageBtn2.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View view){
-                if(view.getId()==R.id.MyBtn2){
-                    Intent intent01 = new Intent(MainActivity.this,MyPageActivity.class);
+            public void onClick(View view) {
+                if (view.getId() == R.id.MyBtn2) {
+                    Intent intent01 = new Intent(MainActivity.this, MyPageActivity.class);
                     startActivity(intent01);
                 }
 
@@ -120,10 +125,30 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 //            }
 //        });
 
-        Marker markertest = new Marker(); //markertest = 서일대
-        markertest.setPosition(new LatLng(37.5857059,127.0974422)); //마커 표시할 위치 (위도, 경도)
-        markertest.setMap(naverMap);
+        Marker markermyunmok = new Marker();
+        markermyunmok.setPosition(new LatLng(37.58872189999978, 127.08731799999974)); //마커 표시할 위치 (위도, 경도)
+        markermyunmok.setMap(naverMap);
+        markermyunmok.setIcon(OverlayImage.fromResource(R.drawable.ic_baseline_place_24));
+        markermyunmok.setOnClickListener(new Overlay.OnClickListener() {
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                Toast.makeText(getApplicationContext(),"면목역 마커", Toast.LENGTH_LONG).show();
+                return false;
+            }
+        });
 
+
+        Marker markertest = new Marker(); //markertest = 서일대
+        markertest.setPosition(new LatLng(37.5857059, 127.0974422)); //마커 표시할 위치 (위도, 경도)
+        markertest.setMap(naverMap);
+        markertest.setIcon(OverlayImage.fromResource(R.drawable.ic_baseline_place_24));
+        markertest.setOnClickListener(new Overlay.OnClickListener() {
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                Toast.makeText(getApplicationContext(),"테스트 마커", Toast.LENGTH_LONG).show();
+                return false;
+            }
+        });
     }
 
 
@@ -140,9 +165,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
-
-
-
 
 }
 
