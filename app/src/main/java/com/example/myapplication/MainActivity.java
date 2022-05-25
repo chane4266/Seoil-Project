@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 //                Toast.makeText(getApplicationContext(), lat + ",\n" + lon, Toast.LENGTH_SHORT).show();//위도, 경도 토스트 텍스트로 표시하는 코드 (확인용)
 //            }
 //        });
-
+        //면목역 마커
         Marker markermyunmok = new Marker();
         markermyunmok.setPosition(new LatLng(37.58872189999978, 127.08731799999974)); //마커 표시할 위치 (위도, 경도)
         markermyunmok.setMap(naverMap);
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
-
+        //테스트 마커
         Marker markertest = new Marker(); //markertest = 서일대
         markertest.setPosition(new LatLng(37.5857059, 127.0974422)); //마커 표시할 위치 (위도, 경도)
         markertest.setMap(naverMap);
