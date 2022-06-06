@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">RecyclerView</string>
-
+    <string name="user">user123</string>
     <string-array name="store_name">
 
     </string-array>
 
     <string-array name="description">
+
 
     </string-array>
 </resources>

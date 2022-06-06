@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MyPageActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -16,6 +18,7 @@ public class MyPageActivity extends AppCompatActivity implements View.OnClickLis
     private View thirdView; //내리뷰
 
     Button btn01, btn02, btn03;
+    ImageButton btnSetting;
     RecyclerView fa_list;
     StoreListAdapter list_adapter;
 
@@ -34,10 +37,12 @@ public class MyPageActivity extends AppCompatActivity implements View.OnClickLis
         btn01 = findViewById(R.id.sBtn);
         btn02 = findViewById(R.id.jBtn);
         btn03 = findViewById(R.id.rBtn);
+        btnSetting = findViewById(R.id.settingBtn);
 
         btn01.setOnClickListener(this);
         btn02.setOnClickListener(this);
         btn03.setOnClickListener(this);
+        btnSetting.setOnClickListener(this);
 
         fa_list = findViewById(R.id.favorite_list);
         LinearLayoutManager lM = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL, false);
@@ -80,6 +85,10 @@ public class MyPageActivity extends AppCompatActivity implements View.OnClickLis
                 secondView.setVisibility(View.INVISIBLE);
                 thirdView.setVisibility(View.VISIBLE);
                 break;
+            }
+            if(view.getId() == R.id.settingBtn){
+                Intent Setting1 = new Intent(this, SettingActivity.class);
+                startActivity(Setting1);
             }
         }
     }
