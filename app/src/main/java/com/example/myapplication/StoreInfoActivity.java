@@ -3,15 +3,18 @@ package com.example.myapplication;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class StoreInfoActivity extends AppCompatActivity implements View.OnClickListener{
     private View menu;
     private View review;
 
     Button menu_button, review_button;
+    TextView txtstore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +27,14 @@ public class StoreInfoActivity extends AppCompatActivity implements View.OnClick
 
         menu_button = findViewById(R.id.Button_Menu);
         review_button = findViewById(R.id.Button_Review);
+        txtstore = findViewById(R.id.textView_StoreInfo);
 
         menu_button.setOnClickListener(this);
         review_button.setOnClickListener(this);
+
+        Intent intent = getIntent();
+
+        txtstore.setText(intent.getStringExtra("title"));
 
     }
     public void init(){

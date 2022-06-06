@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.icu.text.CaseMap;
 import android.os.Parcelable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,11 +66,21 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
             store_de = itemView.findViewById(R.id.detxt);
             store_score = itemView.findViewById(R.id.scoretxt);
 
-                       /*Toast.makeText(mContext,storeListitem.title + "\n"
-                            + storeListitem.score + "\n"
-                            + storeListitem.content
-                            ,Toast.LENGTH_SHORT).show(); */ //각 카드뷰마다 저장된 정보를 토스트로 보여줌
-                    //-----식당정보페이지완성되면 그기능으로 바꾸기-----*/
+            itemView.setClickable(true);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int pos = getAdapterPosition();
+                    if(pos != RecyclerView.NO_POSITION){
+                        Context context = view.getContext();
+
+                        Intent Storeinfo = new Intent(context, StoreInfoActivity.class);
+
+
+                        ((ListActivity)context).startActivity(Storeinfo);
+                    }
+                }
+            });
 
 
         }
