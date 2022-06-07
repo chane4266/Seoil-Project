@@ -44,8 +44,10 @@ public class StoreInfoActivity extends AppCompatActivity implements View.OnClick
 
     }
     @Override
-    public void onClick(View view) {
-        switch(view.getId()){
+    public void onClick(View view)
+    {
+        switch(view.getId())
+        {
             //스탬프 뷰만보이기
             case R.id.Button_Menu:
                 menu.setVisibility(View.VISIBLE);

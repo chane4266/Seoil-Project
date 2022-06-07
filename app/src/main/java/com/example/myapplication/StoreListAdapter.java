@@ -67,9 +67,11 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
             store_score = itemView.findViewById(R.id.scoretxt);
 
             itemView.setClickable(true);
-            itemView.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener()
+            {
                 @Override
-                public void onClick(View view) {
+                public void onClick(View view)
+                {
                     int pos = getAdapterPosition();
                     if(pos != RecyclerView.NO_POSITION){
                         Context context = view.getContext();

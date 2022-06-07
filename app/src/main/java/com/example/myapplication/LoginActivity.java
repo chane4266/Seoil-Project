@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener
 {
-    Button btn01, btn02, btn03, btn04;
+    Button btn01, btn02, btn03, btn04, btn_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         btn04 = (Button) findViewById(R.id.idPwBtn2);
         btn04.setOnClickListener(this);
+
+        btn_login = (Button) findViewById(R.id.loginBtn);
+        btn_login.setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +54,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(view.getId()==R.id.idPwBtn2){
             Intent intent04 = new Intent(this,FindPWActivity.class);
             startActivity(intent04);
+        }
+        if(view.getId()==R.id.loginBtn)
+        {
+            Intent intent_login = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent_login);
         }
     }
 }
