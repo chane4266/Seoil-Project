@@ -60,13 +60,14 @@
         app:layout_constraintGuide_percent="0.67" />
 
 
-
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="스탬프"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:background="#fae6e6"
+        android:text="스탬프"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintHorizontal_bias="1.0"
@@ -74,12 +75,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline8"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/jBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="즐겨찾기"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:background="#fae6e6"
+        android:text="즐겨찾기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintHorizontal_bias="0.478"
@@ -87,12 +90,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline8"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/rBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="내 리뷰"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:background="#fae6e6"
+        android:text="내 리뷰"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.609"

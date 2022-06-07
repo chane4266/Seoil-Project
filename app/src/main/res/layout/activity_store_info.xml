@@ -98,11 +98,13 @@
         app:layout_constraintStart_toStartOf="@+id/guideline_v_center"
         app:layout_constraintTop_toTopOf="@+id/guideline_h_top2" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Button_Menu"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#F5B4B4"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="#fae6e6"
         android:text="메뉴"
         app:layout_constraintBottom_toTopOf="@+id/guideline_h_center"
         app:layout_constraintEnd_toStartOf="@+id/guideline_v_center"
@@ -110,12 +112,13 @@
         app:layout_constraintStart_toStartOf="@+id/guideline_v_left"
         app:layout_constraintTop_toTopOf="@+id/guideline_h_center2" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Button_Review"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#F5B4B4"
-        android:backgroundTint="#F5B4B4"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="#fae6e6"
         android:text="리뷰"
         app:layout_constraintBottom_toTopOf="@+id/guideline_h_center"
         app:layout_constraintEnd_toStartOf="@+id/guideline_v_right"
