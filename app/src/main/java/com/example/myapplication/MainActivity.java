@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.naver.maps.geometry.LatLng;
@@ -40,8 +41,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     List<LatLng> lstLatLng = new ArrayList<>();
     Button MypageBtn;
-    Button MypageBtn2;
-    Button Listbtn;
+    ImageButton MypageBtn2;
+    ImageButton Listbtn;
     EditText EditLocate;
 
 
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         EditLocate = (EditText) findViewById(R.id.EditLocate);
         // EditLocate.setText();
 
-        Listbtn = (Button) findViewById(R.id.liBtn);
+        Listbtn = (ImageButton) findViewById(R.id.liBtn);
         Listbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
 
 
-        MypageBtn2 = (Button) findViewById(R.id.MyBtn2);
+        MypageBtn2 = (ImageButton) findViewById(R.id.MyBtn2);
         MypageBtn2.setOnClickListener(new View.OnClickListener() {
 
             @Override
