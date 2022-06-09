@@ -85,7 +85,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/buttonID"
+        android:id="@+id/comfirm_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -93,6 +93,7 @@
         android:backgroundTint="#FFCCCC"
         android:text="중복 확인"
         android:textSize="14dp"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/editId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editId" />
